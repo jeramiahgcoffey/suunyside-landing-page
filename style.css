@@ -1,3 +1,15 @@
+:root {
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: #25564b;
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    --very-dark-desaturated-blue: #23303e;
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+}
+
 html,
 body {
     margin: 0;
@@ -11,6 +23,11 @@ body {
     flex-direction: column;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
+    color: var(--very-dark-desaturated-blue);
+}
+
+p {
+    font-size: 18px;
 }
 
 header {
@@ -35,7 +52,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;
+    padding: 3rem 9rem;
 }
 
 .nav {
@@ -49,7 +66,7 @@ header {
 }
 
 .contact {
-    color: black;
+    color: var(--very-dark-desaturated-blue);
     background-color: white;
     margin-right: 0;
     padding: 15px 25px;
@@ -63,5 +80,193 @@ header {
     font-family: 'Fraunces', serif;
     font-weight: 900;
     font-size: 2rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 100%;
+}
+
+.feature {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-text {
+    max-width: 60%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.feature img {
+    width: 100%;
+    height: 100%;
+}
+
+.feature h2,
+h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
+.feature h2 {
+    font-size: 2rem;
+}
+
+.feature p {
+    color: var(--very-dark-grayish-blue);
+}
+
+.feature-bottom {
+    position: relative;
+    height: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-top: 83.34%;
+    /* Trick to get bg-img to size correctly: (height/width * width of container) */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+}
+
+.feature-bottom .feature-text {
+    margin-top: -83.34%;
+    /* padding-bottom: 2rem; */
+    width: 50%;
+    padding-top: 45%;
+}
+
+.feature-bottom h3 {
+    font-weight: 900;
+    font-size: 1.7rem;
+    font-family: 'Fraunces', serif;
+    margin-bottom: 1rem;
+}
+
+#graphic-design h3,
+#graphic-design p {
+    color: var(--dark-desaturated-cyan);
+}
+
+#photography h3,
+#photography p {
+    color: var(--dark-blue);
+}
+
+#graphic-design {
+    background-image: url('./images/desktop/image-graphic-design.jpg');
+}
+
+#photography {
+    background-image: url('./images/desktop/image-photography.jpg');
+}
+
+.testimonials {
+    padding: 6rem 4rem;
+    text-align: center;
+}
+
+.testimonials .title {
+    color: var(--grayish-blue);
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.test-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.profile {
+    min-height: 100%;
+}
+
+.profile img {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    margin-bottom: 2rem;
+}
+
+.test-card p {
+    min-height: 100%;
+    margin-bottom: 4rem;
+    color: var(--very-dark-grayish-blue);
+}
+
+.client-title h4 {
+    color: var(--very-dark-desaturated-blue);
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
+.client-title {
+    min-height: 100%;
+    color: var(--grayish-blue);
+}
+
+.test-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-container {
+    display: flex;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    padding: 3rem;
+    padding-bottom: 0.5rem;
+    background-color: hsl(168, 54%, 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-desaturated-cyan);
+}
+
+.footer-logo {
+    filter: invert(27%) sepia(34%) saturate(708%) hue-rotate(116deg)
+        brightness(50%) contrast(84%);
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    margin-bottom: 3rem;
+}
+
+.footer-links a {
+    color: var(--dark-desaturated-cyan);
+    margin: 2rem;
+    text-decoration: none;
+}
+
+.footer-icons {
+    margin-bottom: 3rem;
+}
+
+.footer-icons a {
+    margin: 1rem;
 }
